@@ -1,22 +1,23 @@
 import json
 from urllib.request import urlopen
 
-def get_delay_for():
-  pass
-
-def get_weather_at():
-  pass
-
 def get_city_for():
   pass
+
+def get_temperature_at():
+  pass
+
+def get_wind_at():
+  pass
+
 
 # city_name = get_city_for('ORD')
 # print("ORD serves the city of", city_name)
 
-# current_weather = get_weather_at('ORD')
-# print("The weather is:", current_weather)
+# temperature = get_temperature_at('ORD')
+# print("The temperature is:", temperature)
 
-# delay_message = get_delay_for('ORD')
-# print("The delay is:", delay_message)
+# wind_report = get_wind_at('ORD')
+# print("The wind is:", wind_report)
 
 
