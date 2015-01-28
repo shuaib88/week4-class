@@ -7,7 +7,6 @@
 import json
 from urllib.request import urlopen
 
-airport_codes = ['ORD', 'SFO', 'JFK', 'LGA', 'PHL', 'LAX', 'EWR', 'TEB', 'BOS']
 
 # 2. Display the city and weather information at each airport:
 #
@@ -18,12 +17,37 @@ airport_codes = ['ORD', 'SFO', 'JFK', 'LGA', 'PHL', 'LAX', 'EWR', 'TEB', 'BOS']
 # Here's a function to help you get started:
 
 def get_airport_info(airport_code):
+  # print(sport)
   url = "http://services.faa.gov/airport/status/" + airport_code + "?format=application/json"
   data = urlopen(url).read().decode()
   result = json.loads(data)
   return result
 
+def get_weather(airport_code):
+  sport = "hockey"
+  get_airport_info(airport_code)
+
+
+get_weather("ORD")
+
+
 # TO DO: Write your code here.  Feel free to modify the code above, too.
 #
+# ORD (Chicago): The temperature is 30.0 F (-1.1 C), and the wind is Northeast at 8.1mph.
+airport_codes = ['ORD', 'SFO', 'JFK', 'LGA', 'PHL', 'LAX', 'EWR', 'TEB', 'BOS']
+
+for airport_code in airport_codes:
+  info = get_airport_info(airport_code)
+  print(airport_code, "(" + info['city'] + ")", "The temperature is", info['weather']['temp'], "and the wind is",
+    info['weather']['wind'])
+
+
+
+
+
+
+
+
+
 
 

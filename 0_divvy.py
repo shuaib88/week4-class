@@ -25,6 +25,7 @@ for station in stations:
   if distance_from_young < nearest_distance:
     nearest_station = station
     nearest_distance = distance_from_young
+    print(nearest_station["stationName"])
 
 
 print("The nearest station is:", nearest_station['stationName'])
